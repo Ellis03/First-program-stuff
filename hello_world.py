@@ -65,8 +65,12 @@
 # #Adds 5 to the user input and prints the calculation and total
 # print(f"{x} + 5 = {x+5}")
 
-
-x = int(input("please enter a number:\n"))
+#Tries the code and handles an exception when data from another data type is entered
+try:
+    x = int(input("please enter a number:\n"))
+except:
+    print ("You have not entered a number, please try again.")
+    x = int(input("please enter a number:\n"))
 if x <= 0:
     print (f"Number entered needs to be more than 0")
 elif x >= 15:
